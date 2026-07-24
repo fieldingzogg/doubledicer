@@ -56,5 +56,7 @@ Run
 ---
 
 ## Future Improvements 
-
+ Automatic reset withot restarting program for repeated use 
+ More user-friendly scanf implementation
+ 
 
