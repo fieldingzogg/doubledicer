@@ -1,12 +1,3 @@
-/******************************************************************************
-
-Welcome to GDB Online.
-  GDB online is an online compiler and debugger tool for C, C++, Python, PHP, Ruby, 
-  C#, OCaml, VB, Perl, Swift, Prolog, Javascript, Pascal, COBOL, HTML, CSS, JS
-  Code, Compile, Run and Debug online from anywhere in world.
-
-*******************************************************************************/
-#include <stdio.h>
 #include <math.h>
 #include <stdio.h>
 #include <string.h>
@@ -46,7 +37,7 @@ int isexcept( int e, uint64_t m){
     return -1;   
 }
 
-double classifydoub(SEM a){
+double reconstructdoub(SEM a){
     
     int exponent = (int)a.y - 1023;
     int numbertype = isexcept(a.y, a.z);
@@ -96,7 +87,7 @@ double classifydoub(SEM a){
             
             return 0;
         }
-    
+        return 0;    
     }
     
     else {
@@ -143,15 +134,15 @@ double classifydoub(SEM a){
             
             return 0;
         }
-        
+        return -25;
     }
-    
+    return -25;   
 }
 void binaryprint(uint64_t bits){
     
     for(int i = 0; i < 64; i++){
        
-       int a = bits>> 63-i & 1; 
+       int a = bits>> (63-i) & 1; 
       
       
         printf("%d",a);
@@ -193,13 +184,13 @@ void printbits(SEM b){
    
 }
     
-double displaybehave(double figure){
+void displaybehave(double figure){
     
     printf("\nCURRENT FIGURE = %.17f \n", figure);
     printf("Here are the bits stored in IEEE 754 format s-e-m  \n\n");
     SEM a = parsebits(figure);
     printbits(a);
-    double result =classifydoub(a);
+    reconstructdoub(a);
     printf("_________________________________________________________________\n");
 }
 
