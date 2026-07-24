@@ -206,10 +206,7 @@ int main()
     printf("Enter Denomninator : ");
     scanf("%lf", &input2);
     
-    
     double INP = input1/input2;
-    
-   
     
     displaybehave(INP);
     
