@@ -22,7 +22,10 @@ Based on classification, DD follows the appropriate reconstruction algorithm to 
 
 ## EXAMPLE OUTPUT
 
-<img width="754" height="499" alt="Live Demo" src="https://github.com/user-attachments/assets/bfd8932d-7bc7-4011-aa7e-a66bbb1414b6" />
+
+https://github.com/user-attachments/assets/5f740430-ec48-4d00-90bd-cbcbec45cb38
+
+
 
 ---
 
